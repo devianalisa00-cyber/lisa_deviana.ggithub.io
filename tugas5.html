@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tugas 5 - HALLO LISA</title>
+<style>
+:root{--navy:#14213d;--navy-soft:#22345c;--amber:#fca311;--paper:#f6f4ef;--ink:#1b1b1f;--line:#d9d5ca}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Times New Roman",serif;background:var(--paper);color:var(--ink);line-height:1.7;min-height:100vh;display:flex;flex-direction:column}
+a{color:inherit}
+header{background:var(--navy);position:sticky;top:0;z-index:10}
+nav{max-width:1000px;margin:auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:.8rem 1.2rem;gap:.5rem}
+.logo{color:#fff;font-weight:bold;font-size:1.2rem;text-decoration:none}
+nav ul{list-style:none;display:flex;flex-wrap:wrap;gap:.3rem}
+nav ul li{position:relative}
+nav ul a{display:block;color:#dfe6f3;text-decoration:none;padding:.4rem .9rem;border-radius:6px;font-family:Arial,sans-serif}
+nav ul a:hover,nav ul a.aktif{background:var(--navy-soft);color:#fff}
+.dropdown-menu{display:none;position:absolute;top:100%;left:0;background:var(--navy);min-width:140px;border-radius:6px;box-shadow:0 6px 14px rgba(0,0,0,.2);padding:.3rem;z-index:20}
+.dropdown:hover .dropdown-menu{display:block}
+.dropdown-menu a{padding:.45rem .8rem;font-size:.9rem}
+main{max-width:1000px;width:100%;margin:0 auto;padding:0 1.2rem;flex:1}
+.halaman{padding:3rem 0 4rem}
+h2{font-size:2rem;color:var(--navy);margin-bottom:1.5rem;padding-bottom:.5rem;border-bottom:3px solid var(--amber);display:inline-block}
+.kotak-kosong{background:#fff;border:2px dashed var(--line);border-radius:10px;padding:3rem 1.5rem;text-align:center;font-family:Arial,sans-serif;color:#666}
+.kotak-kosong h3{color:var(--navy);margin-bottom:.5rem}
+.kembali{display:inline-block;margin-top:2rem;font-family:Arial,sans-serif;color:var(--navy);text-decoration:none;font-weight:bold}
+footer{background:var(--navy);color:#c5cee0;text-align:center;padding:1.5rem;font-family:Arial,sans-serif;font-size:.9rem}
+@media(max-width:640px){nav{justify-content:center}h2{font-size:1.7rem}}
+</style>
+</head>
+<body>
+<header>
+<nav>
+    <a class="logo" href="index.html">HALLO LISA</a>
+    <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="biodata.html">Biodata</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li class="dropdown">
+            <a class="aktif" href="tugas.html">Tugas ▾</a>
+            <ul class="dropdown-menu">
+                <li><a href="tugas1.html">Tugas 1</a></li>
+                <li><a href="tugas2.html">Tugas 2</a></li>
+                <li><a href="tugas3.html">Tugas 3</a></li>
+                <li><a href="tugas4.html">Tugas 4</a></li>
+                <li><a class="aktif" href="tugas5.html">Tugas 5</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+</header>
+
+<main>
+<section class="halaman">
+    <h2>Tugas 5</h2>
+    <div class="kotak-kosong">
+        <h3>Halaman Tugas 5 Masih Kosong</h3>
+        <p>Konten untuk Tugas 5 akan segera ditambahkan.</p>
+    </div>
+    <a class="kembali" href="tugas.html">← Kembali ke Daftar Tugas</a>
+</section>
+</main>
+
+<footer>&copy; 2026 Website Pribadi Lisa Deviana</footer>
+</body>
+</html>
