@@ -17,21 +17,20 @@ nav ul li{position:relative}
 nav ul a{display:block;color:#dfe6f3;text-decoration:none;padding:.4rem .9rem;border-radius:6px;font-family:Arial,sans-serif}
 nav ul a:hover,nav ul a.aktif{background:var(--navy-soft);color:#fff}
 .dropdown-menu{display:none;position:absolute;top:100%;left:0;background:var(--navy);min-width:140px;border-radius:6px;box-shadow:0 6px 14px rgba(0,0,0,.2);padding:.3rem;z-index:20}
-.dropdown:hover .dropdown-menu{display:block}
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu{display:block}
 .dropdown-menu a{padding:.45rem .8rem;font-size:.9rem}
 main{max-width:1000px;width:100%;margin:0 auto;padding:0 1.2rem;flex:1}
 .halaman{padding:3rem 0 4rem}
-h2{font-size:2rem;color:var(--navy);margin-bottom:1.5rem;padding-bottom:.5rem;border-bottom:3px solid var(--amber);display:inline-block}
-h3{font-size:1.25rem;color:var(--navy);margin-bottom:.8rem}
-.kotak-tugas{background:#fff;border:1px solid var(--line);border-radius:10px;padding:1.5rem;margin-bottom:2rem}
-.kotak-tugas p{font-family:Arial,sans-serif;font-size:.95rem;margin-bottom:1rem}
-.tombol-form{display:inline-block;background:var(--navy);color:#fff;padding:8px 15px;border-radius:6px;text-decoration:none;font-family:Arial,sans-serif;font-size:.9rem;transition:.2s}
-.tombol-form:hover{background:var(--amber);color:var(--navy)}
-.embed-container{width:100%;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fafafa;margin-top:1rem}
-.embed-container iframe{width:100%;height:600px;border:none;display:block}
-.kembali{display:inline-block;margin-top:1rem;font-family:Arial,sans-serif;color:var(--navy);text-decoration:none;font-weight:bold}
+h1{font-size:clamp(2rem,5vw,3rem);line-height:1.15;color:var(--navy)}
+.pengantar{font-size:1.1rem;margin:1rem 0 1.5rem}
+.form-wrap{background:#fff;border:2px solid var(--navy);border-radius:10px;overflow:hidden}
+.form-wrap iframe{display:block;width:100%;height:1400px;border:0}
+.judul-data{font-size:1.6rem;color:var(--navy);margin:2.5rem 0 1rem}
+.alt{font-family:Arial,sans-serif;font-size:.9rem;margin-top:1rem}
+.alt a{color:var(--navy);font-weight:bold}
 footer{background:var(--navy);color:#c5cee0;text-align:center;padding:1.5rem;font-family:Arial,sans-serif;font-size:.9rem}
-@media(max-width:640px){nav{justify-content:center}h2{font-size:1.7rem}.embed-container iframe{height:460px}}
+@media(max-width:640px){nav{justify-content:center}.form-wrap iframe{height:1600px}}
 </style>
 </head>
 <body>
@@ -46,7 +45,7 @@ footer{background:var(--navy);color:#c5cee0;text-align:center;padding:1.5rem;fon
         <li class="dropdown">
             <a class="aktif" href="tugas.html">Tugas ▾</a>
             <ul class="dropdown-menu">
-                <li><a class="aktif" href="tugas1.html">Tugas 1</a></li>
+                <li><a href="tugas1.html">Tugas 1</a></li>
                 <li><a href="tugas2.html">Tugas 2</a></li>
                 <li><a href="tugas3.html">Tugas 3</a></li>
                 <li><a href="tugas4.html">Tugas 4</a></li>
@@ -59,18 +58,28 @@ footer{background:var(--navy);color:#c5cee0;text-align:center;padding:1.5rem;fon
 
 <main>
 <section class="halaman">
-    <h2>Tugas 1 - Google Form</h2>
-    <div class="kotak-tugas">
-        <h3>Pengisian Google Form</h3>
-        <p>Silakan isi Google Form di bawah ini atau klik tombol untuk membuka di tab baru.</p>
-        <a class="tombol-form" href="https://forms.gle/YSXTEBSEzdLWHxdq9" target="_blank" rel="noopener noreferrer">Buka Google Form</a>
+    <h1>Tugas 1</h1>
+    <p class="pengantar">Silakan isi formulir di bawah ini.</p>
 
-        <div class="embed-container">
-            <!-- Ganti link src jika ingin menampilkan embed dari forms.gle/YSXTEBSEzdLWHxdq9 (pakai link panjang ...viewform?embedded=true) -->
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd3YMgTP7nSYZxMyYNkcfLbWxe_Vmusq8IfRyDdhoqAIHlY0g/viewform?embedded=true" loading="lazy">Memuat Google Form...</iframe>
-        </div>
+    <div class="form-wrap">
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfBhvZP2rqo_rvaTp0P5T5xRE3wVMMTjW4yIrU_Q7Sip-vCBg/viewform?embedded=true"
+            title="Formulir Tugas 1">
+            Memuat formulir…
+        </iframe>
     </div>
-    <a class="kembali" href="tugas.html">← Kembali ke Daftar Tugas</a>
+
+    <h2 class="judul-data">Data tanggapan</h2>
+    <div class="form-wrap">
+        <iframe
+            src="https://docs.google.com/spreadsheets/d/1PG_aCaEUS7ArE9Uc-aT1s1IhuF6207DZ7yfVpxPvwGU/pubhtml?widget=true&amp;headers=false"
+            title="Data tanggapan Tugas 1"
+            style="height:600px">
+            Memuat data…
+        </iframe>
+    </div>
+
+    <p class="alt">Formulir tidak tampil? <a href="https://docs.google.com/forms/d/e/1FAIpQLSfBhvZP2rqo_rvaTp0P5T5xRE3wVMMTjW4yIrU_Q7Sip-vCBg/viewform?usp=header" target="_blank" rel="noopener">Buka di tab baru</a></p>
 </section>
 </main>
 
